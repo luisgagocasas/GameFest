@@ -1,0 +1,379 @@
+@import 'nib/vendor'
+@import "keyframes.styl"
+@import "animate.styl"
+@import "animate-mixins.styl"
+
+vendor-prefixes = o ms moz webkit
+
+@font-face
+  font-family 'Open Sans'
+  font-style normal
+  font-weight 400
+  src local('Open Sans'), local('OpenSans'), url("fonts/opensans.woff") format('woff')
+
+@font-face
+	font-family 'Crete Round'
+	src local('Crete Round'), local('Crete Round'), url("fonts/creteround-regular-webfont.woff") format("woff")
+	font-weight normal
+	font-style normal
+
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	ms-border-radius arguments
+	o-border-radius arguments
+	border-radius arguments
+
+appearance()
+	-webkit-appearance arguments
+	-moz-appearance arguments
+	ms-appearance arguments
+	o-appearance arguments
+	appearance arguments
+
+box-shadow()
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	ms-box-shadow arguments
+	o-box-shadow arguments
+	box-shadow arguments
+
+transform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	ms-transform arguments
+	o-transform arguments
+	transform arguments
+
+html,button,input,select,textarea
+	color #222
+
+body
+	background #FFF
+	// // background url(../img/bg.jpg) top no-repeat
+	// background url(http://koke.github.io/scalablebg/images/background.jpg) no-repeat center top
+	width 100%
+	height 100%
+	// color #95B5EA
+	color #323e4a
+	font-family 'Open Sans',Arial,Sans-serif
+	font-size 16px
+	margin 0px
+
+::-moz-selection
+	background #ffa500
+	color #fff
+	text-shadow none
+
+::selection
+	background #ffa500
+	color #fff
+	text-shadow none
+
+hr
+	display block
+	height 1px
+	border 0
+	border-top 1px solid #ccc
+	margin 1em 0
+	padding 0
+
+img
+	vertical-align middle
+
+fieldset
+	border 0
+	margin 0
+	padding 0
+
+textarea
+	resize vertical
+
+#bg
+	position fixed
+	z-index -1
+	top 0
+	left 0
+	width 100%
+
+.pagina
+	margin 0px auto 0px auto
+	width 1000px
+	height auto
+	position absolute
+	left 0px
+	right 0px
+
+header
+	width 100%
+	position fixed
+	top 0
+	left 0
+	//background linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.9))
+
+.cabecera
+	width 1000px
+	margin 0px auto
+
+.flotante
+	background linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.9))
+
+.menuprincipal
+	float left
+	margin 5px 0px 0px 20px
+
+	.logo
+		width 200px
+		margin 0px auto
+		display inline-block
+		vertical-align top
+
+		img
+			width 100%
+			// opacity 0.8
+
+		&:hover
+			animated()
+			animatedflip()
+
+	ul
+		margin 40px 0px 0px 0px
+		padding 0px
+		display inline-block
+
+		li
+			margin 0px 5px 0px 5px
+			padding 0px
+			display inline-block
+
+			a
+				display block
+				color #FFF
+				text-decoration none
+				font-size 22px
+				font-family 'Crete Round'
+
+				&:hover
+					animated()
+					animatedpulse()
+
+.redes
+	float right
+	margin 40px 20px 0 0px
+
+	ul
+		margin 0px
+		padding 0px
+
+		li
+			margin 0px
+			padding 0px
+			display inline-block
+
+			a
+				display block
+				color #FFF
+				text-decoration none
+
+				img
+					width 100%
+
+				&:hover
+					animated()
+					animatedpulse()
+
+.efectoone
+	animated()
+	animatedbounceIn()
+
+.contenido
+	position absolute
+	margin 125px auto 0 auto
+	z-index -1
+	text-align justify
+	left 0
+	right 0
+	width 940px
+
+	section
+		color #FFF
+
+		.inscripcion
+			width 100%
+			margin 50px 0px 0px 0px
+
+			.inscr
+				vertical-align top
+				position absolute
+
+			.one
+				margin 0px 0px 0px 180px
+
+				&:hover
+					cursor pointer
+					animated()
+					animatedpulse()
+
+			.twu
+				margin -50px 0px 0px 411px
+
+				&:hover
+					cursor pointer
+					animated()
+					animatedpulse()
+
+			img
+				width 400px
+
+		p
+			margin 10px 0px 0px 0px
+			font-size 18px
+			line-height 30px
+
+		img
+			width auto
+
+		blockquote
+			background #f9f9f9
+			border-left 10px solid #ccc
+			margin 20px 40px 20px 40px
+			padding 0.5em 10px
+			color #323e4a
+
+			&:before
+				color #ccc
+				content open-quote
+				font-size 4em
+				line-height 0.1em
+				margin-right 0.25em
+				vertical-align -0.4em
+
+			p
+				display inline
+
+	.listajuegos
+		width 100%
+		height auto
+
+		.juego
+			width 47%
+			height auto
+			display inline-block
+			margin 0px 10px 50px 10px
+
+			.textimg
+				width 100%
+				font-size 15px
+				line-height 22px
+				vertical-align top
+
+				img
+					width 200px
+					float left
+
+			.video
+				border 10px solid rgba(255,255,255,0.3)
+				border-radius 10px
+				padding-bottom 56.25%
+				position relative
+				text-align left
+				z-index 1
+
+				iframe
+					position absolute
+					width 100%
+					height 100%
+
+.mensaje, .error
+	position absolute
+	width 650px
+	height auto
+	top 30%
+	left 50%
+	margin-left -295px
+	box-shadow 0px 0px 10px #000
+	padding 5px 5px 5px 5px
+	border-radius 5px
+	z-index 11520
+	transition opacity 0.3s
+
+	.texto
+		background #fff
+		display inline-block
+		// margin-left 36px
+		padding 2px 5px 5px 5px
+		border-radius 10px
+		width 100%
+		box-sizing border-box
+		text-align center
+
+		h2
+			margin 0px 0px 0px 0px
+			font-size 1.4em
+
+		p
+			margin 0px 0px 0px 0px
+			line-height 14px
+
+	.cerrar
+		font-size 15px
+		position absolute
+		display block
+		background #000
+		right 0px
+		top 0px
+		padding 5px
+		border-radius 20px
+		width 7px
+		height 7px
+		color #FFF
+		line-height 5px
+		margin -5px -5px 0px 0px
+		box-shadow 0px 0px 2px #FFF
+		cursor pointer
+
+.mensaje
+	background #4b9833 url("../img/tip.png") no-repeat 6px center
+
+.error
+	background #C91717 url("../img/error.png") no-repeat 6px center
+
+.overlay
+	background rgba(0,0,0,0.5)
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	cursor default
+
+@import "keyframess.styl"
+
+.tipos
+	width 100%
+	height auto
+	text-align center
+
+	.tipo
+		margin 10px auto
+		display inline-block
+
+		a
+			float left
+			width 200px
+			height 50px
+			line-height 50px
+			background-color #ddd
+			padding-left 20px
+			border-radius 10px
+			box-shadow 0 2px 0 #4c9434
+			background linear-gradient(to bottom, #60B842 0%, #7FD13D 85%)
+			color #fff
+			font-size 17px
+			font-weight bold
+			text-shadow 1px 1px 1px #4c9434
+			text-decoration none
+
+			&:hover
+				background-image linear-gradient(center bottom,#6DD14B 0%,#85DB40 85%)
+				box-shadow 0 2px 0 #5EA836
