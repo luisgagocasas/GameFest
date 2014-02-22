@@ -5,10 +5,10 @@ Este proyecto estará en gamefest.plataforma.edu.pe el cual es para la inscripci
 
 Lo que se uso para desarrollar fue:
 
--Html5
--Css3
--JavaScript
--Stylus
--Jquery
--PHP
--Mysql
+- Html5
+- Css3
+- JavaScript
+- Stylus
+- Jquery
+- PHP
+- Mysql
