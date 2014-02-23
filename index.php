@@ -87,6 +87,7 @@
 						<p class="textimg">
 							<img src="img/logo.png" />
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod non quia accusamus vitae architecto cupiditate quibusdam. Autem assumenda sint explicabo.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.
 						</p>
 						<div class="video">
 							<iframe width="560" height="315" src="http://www.youtube.com/embed/1E3jGwGcgg0" frameborder="0" allowfullscreen></iframe>

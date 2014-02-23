@@ -2,10 +2,10 @@ jQuery(function() {
     jQuery(window).scroll(function(){
         var scrollTop = jQuery(window).scrollTop();
         if(scrollTop >= 40){
-            jQuery('header').addClass("flotante cabein");
+            jQuery('header').addClass("flotante");
         }
         else{
-            jQuery('header').removeClass("flotante cabein");
+            jQuery('header').removeClass("flotante");
         }
     });
 });
@@ -13,7 +13,6 @@ jQuery(function() {
 $(document).ready( function(){
 	$("#gamereg").click(function(){
         $.ajax({
-            type: "POST",
             dataType: 'json',
             url: "guardar.php?tipo=game"
         }).done(function(respuesta){
@@ -22,7 +21,6 @@ $(document).ready( function(){
     });
     $("#cosplay").click(function(){
         $.ajax({
-            type: "POST",
             dataType: 'json',
             url: "guardar.php?tipo=cosplay"
         }).done(function(respuesta){

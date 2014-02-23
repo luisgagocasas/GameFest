@@ -898,16 +898,21 @@ textarea{resize:vertical}
 .pagina{margin:0 auto 0 auto;width:1000px;height:auto;position:absolute;left:0;right:0}
 header{width:100%;position:fixed;top:0;left:0}
 .cabecera{width:1000px;margin:0 auto}
-.flotante{background:-o-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-ms-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-moz-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-webkit-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9))}
+.flotante{background:-o-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-ms-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-moz-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));background:-webkit-linear-gradient(top, rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9));-o-animation-duration:1s;-ms-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-duration:1s;-o-animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both;-webkit-animation-fill-mode:both;-o-animation-name:bounce;-ms-animation-name:bounce;-moz-animation-name:bounce;-webkit-animation-name:bounce;}
+.flotante .menuprincipal{margin:0 0 0 20px !important}
+.flotante .redes{margin:0 20px 0 0 !important}
+.flotante a{color:#000 !important}
+.flotante .logo{width:110px !important}
+.flotante ul{margin:22px 0 0 0 !important}
 .menuprincipal{float:left;margin:5px 0 0 20px;}
 .menuprincipal .logo{width:200px;margin:0 auto;display:inline-block;vertical-align:top;}
 .menuprincipal .logo img{width:100%}
 .menuprincipal .logo:hover{-o-animation-duration:1s;-ms-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-duration:1s;-o-animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both;-webkit-animation-fill-mode:both;-o-animation-name:flip;-ms-animation-name:flip;-moz-animation-name:flip;-webkit-animation-name:flip;-ms-backface-visibility:visible !important;-moz-backface-visibility:visible !important;-webkit-backface-visibility:visible !important}
-.menuprincipal ul{margin:40px 0 0 0;padding:0;display:inline-block;}
+.menuprincipal ul{margin:50px 0 0 0;padding:0;display:inline-block;}
 .menuprincipal ul li{margin:0 5px 0 5px;padding:0;display:inline-block;}
 .menuprincipal ul li a{display:block;color:#fff;text-decoration:none;font-size:22px;font-family:'Crete Round';}
 .menuprincipal ul li a:hover{-o-animation-duration:1s;-ms-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-duration:1s;-o-animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both;-webkit-animation-fill-mode:both;-o-animation-name:pulse;-ms-animation-name:pulse;-moz-animation-name:pulse;-webkit-animation-name:pulse}
-.redes{float:right;margin:40px 20px 0 0;}
+.redes{float:right;margin:55px 20px 0 0;}
 .redes ul{margin:0;padding:0;}
 .redes ul li{margin:0;padding:0;display:inline-block;}
 .redes ul li a{display:block;color:#fff;text-decoration:none;}
@@ -929,11 +934,14 @@ header{width:100%;position:fixed;top:0;left:0}
 .contenido section blockquote:before{color:#ccc;content:open-quote;font-size:4em;line-height:.1em;margin-right:.25em;vertical-align:-.4em}
 .contenido section blockquote p{display:inline}
 .contenido .listajuegos{width:100%;height:auto;}
-.contenido .listajuegos .juego{width:47%;height:auto;display:inline-block;margin:0 10px 50px 10px;}
-.contenido .listajuegos .juego .textimg{width:100%;font-size:15px;line-height:22px;vertical-align:top;}
-.contenido .listajuegos .juego .textimg img{width:200px;float:left}
-.contenido .listajuegos .juego .video{border:10px solid rgba(255,255,255,0.3);-webkit-border-radius:10px;-moz-border-radius:10px;ms-border-radius:10px;o-border-radius:10px;border-radius:10px;padding-bottom:56.25%;position:relative;text-align:left;z-index:1;}
+.contenido .listajuegos .juego{width:47%;height:auto;display:inline-block;margin:0 10px 50px 10px;vertical-align:top;}
+.contenido .listajuegos .juego .textimg{width:95%;font-size:15px;line-height:22px;vertical-align:top;margin:0 auto;height:110px;overflow:hidden;z-index:1;}
+.contenido .listajuegos .juego .textimg:hover{overflow:visible;background:-o-linear-gradient(top, rgba(0,0,0,0) 0, rgba(255,255,255,0.2));background:-ms-linear-gradient(top, rgba(0,0,0,0) 0, rgba(255,255,255,0.2));background:-moz-linear-gradient(top, rgba(0,0,0,0) 0, rgba(255,255,255,0.2));background:-webkit-linear-gradient(top, rgba(0,0,0,0) 0, rgba(255,255,255,0.2));display:block}
+.contenido .listajuegos .juego .textimg img{width:200px;float:left;margin:0 5px 0 0;}
+.contenido .listajuegos .juego .textimg img:hover{-o-animation-duration:1s;-ms-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-duration:1s;-o-animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both;-webkit-animation-fill-mode:both;-o-animation-name:pulse;-ms-animation-name:pulse;-moz-animation-name:pulse;-webkit-animation-name:pulse}
+.contenido .listajuegos .juego .video{border:10px solid rgba(255,255,255,0.3);-webkit-border-radius:10px;-moz-border-radius:10px;ms-border-radius:10px;o-border-radius:10px;border-radius:10px;padding-bottom:56.25%;position:relative;text-align:left;}
 .contenido .listajuegos .juego .video iframe{position:absolute;width:100%;height:100%}
+.contenido .listajuegos .juego .textimg:hover > .video{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0)}
 .mensaje,.error{position:absolute;width:650px;height:auto;top:30%;left:50%;margin-left:-295px;-webkit-box-shadow:0 0 10px #000;-moz-box-shadow:0 0 10px #000;ms-box-shadow:0 0 10px #000;o-box-shadow:0 0 10px #000;box-shadow:0 0 10px #000;padding:5px 5px 5px 5px;-webkit-border-radius:5px;-moz-border-radius:5px;ms-border-radius:5px;o-border-radius:5px;border-radius:5px;z-index:11520;-o-transition:opacity 0.3s;-ms-transition:opacity 0.3s;-moz-transition:opacity 0.3s;-webkit-transition:opacity 0.3s;}
 .mensaje .texto,.error .texto{background:#fff;display:inline-block;padding:2px 5px 5px 5px;-webkit-border-radius:10px;-moz-border-radius:10px;ms-border-radius:10px;o-border-radius:10px;border-radius:10px;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;text-align:center;}
 .mensaje .texto h2,.error .texto h2{margin:0 0 0 0;font-size:1.4em}
