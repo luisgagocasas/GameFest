@@ -50,7 +50,6 @@
                 url: "hola.php",
                 data: formulario
             }).done(function(respuesta){
-                $("#mensaje").html(respuesta.mensaje).fadeIn();
                 $("#frminformacion")[0].reset();
                 $.ajax ({
                     type: "POST",
@@ -58,6 +57,7 @@
                     url: "enviar.php",
                     data: formulario
                 });
+                $("#mensaje").html(respuesta.mensaje).fadeIn();
             });
         });
         $(".cerrar").click(function(){

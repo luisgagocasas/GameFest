@@ -1,59 +1,13 @@
 <?php
 $nombre = $_POST["nombre"];
-$email = $_POST["email"];
+$apellido = $_POST['apellidos'];
+$email = $_POST["correo"];
+$problema = $_POST['codigo'];
 $fMeses = array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
 $fDias = array( 'Domingo', 'Lunes', 'Martes','Miercoles', 'Jueves', 'Viernes', 'Sabado');
 $mi_array = array("Creo muchísimo en la suerte y descubro que cuanto más trabajo, más suerte tengo","No cambian las cosas: cambiamos nosotros","La mente es como un paracaídas, no sirve de nada si no se abre","No hay ninguna cosa seria que no pueda decirse con una sonrisa","Si pensamos tal y como lo hacemos ahora, crearemos el tipo de mundo que ya hemos creado. Si pensamos de otro modo, puede que creemos un mundo diferente y también gente diferente. Sólo pueden cambiar los dos a la vez","Sólo triunfa en el mundo quien se levanta y busca las circunstancias, y las crea si nos las encuentra");
 $max = count($mi_array)-1;
 $numaleatorio = rand(0,$max);
-// institucion -> utp
-if($_POST['institucion']=="UTP Arequipa"){
-    $institucion = "<h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Institución</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['institucion']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Condición</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['condicion']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Curso</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['curso']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Ciclo</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['ciclo']."</p>";
-}
-// institucion -> Unitek
-if($_POST['institucion']=="Unitek"){
-    $institucion = "<h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Institución</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['institucion']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Condición</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['condicionunitek']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» DNI</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['dni']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Carrera</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['carrera']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Curso</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['curso']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Ciclo</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['ciclo']."</p>";
-}
-//grado primaria o secundaria
-if($_POST['nivel']=="Primaria"){
-    $nivel = $_POST['gradop'];
-}
-if($_POST['nivel']=="Secundaria"){
-    $nivel = $_POST['grados'];
-}
-// institucion -> Imagina
-if($_POST['institucion']=="Imagina"){
-    $institucion = "<h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Institución</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['institucion']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Condición</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['condicion']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Codigo</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['codigo']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Curso</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['curso']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Nivel</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['nivel']."</p>
-    <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">» Grado</h3>
-    <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$nivel."</p>";
-}
 if(!empty($nombre)){
     include "phpmailer/PHPMailerAutoload.php";
     $mail = new PHPMailer();
@@ -65,157 +19,102 @@ if(!empty($nombre)){
     $mail->Username = "plataforma@utpaqp.edu.pe";
     $mail->Password = "peducativa123";
     $mail->SetFrom("plataforma@utpaqp.edu.pe", "Plataforma Educativa");
-    $mail->Subject = "Demo: Soporte: ".$_POST['nombre']." ".$_POST['apellido']." - ".$_POST['institucion'];
-    $mail->MsgHTML("<!DOCTYPE>
-<html>
-<head>
-<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />
-<title>Soporte: ".$_POST['nombre']." ".$_POST['apellido']."</title>
-<style type=\"text/css\">
-a:hover { color: #09F !important; text-decoration: underline !important; }
-a:hover#vw { background-color: #CCC !important; text-decoration: none !important; color:#000 !important; }
-a:hover.ff { background-color: #6CF !important; text-decoration: none !important; color:#FFF !important; }
-</style>
-</head>
-<body marginheight=\"0\" topmargin=\"0\" marginwidth=\"0\" style=\"margin: 0px; background-color: #FFFFFF;\" bgcolor=\"#FFFFFF\" leftmargin=\"0\">
-<table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#FFFFFF\">
+    $mail->Subject = "Bienvenido al Game Fest ".$nombre." ".$apellido;
+    $mail->MsgHTML('<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<STYLE type=text/css>
+    tr {font-family:Gill Sans MT, Arial}
+ td {border-collapse:collapse}
+ p { padding: 0; margin: 0}
+ ul, ol {margin: 0; padding: 0}
+ background { none !important}
+ .ReadMsgBody { width: 100%}
+ .ExternalClass {width: 100%}
+ div, p, a, li, td {-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+    </STYLE>
+</HEAD>
+<BODY style="padding:0; margin:0">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-        <td>
-            <table cellspacing=\"0\" border=\"0\" align=\"center\" cellpadding=\"0\" width=\"624\">
+      <td bgcolor="#DBDBDD">
+        <table align="center" width="629" border="0" cellspacing="0" cellpadding="0">
+          <tr>           
+            <td width="629" valign="top">
+              
+              <table width="629" border="0" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td>
-                        <table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"624\">
-                            <tr>
-                                <td valign=\"top\">
-                                    <table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"624\">
-                                        <tr>
-                                            <td>
-                                                <h1 style=\"color: #333; margin: 0px; font-weight: normal; font-size: 60px; font-family: Helvetica, Arial, sans-serif; text-align: center;\">
-                                                    SOPORTE
-                                                </h1>
-                                                <h2 style=\"color: #333; margin: 0px; font-weight: normal; font-size: 30px; font-family: Helvetica, Arial, sans-serif; text-align: center;\">
-                                                 PLATAFORMA EDUCATIVA
-                                                </h2>
-                                            </td>
-                                            <td id=\"issue\" valign=\"top\" style=\"width: 109px; height: 109px;\">
-                                                <img src=\"http://soporte.plataforma.edu.pe/img/plataforma.png\" />
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <table cellspacing=\"0\" border=\"0\" id=\"email-content\" cellpadding=\"0\" width=\"624\">
-                            <tr>
-                                <td><br><br><br>
-                                    <table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"100%\">
-                                        <tr>
-                                            <td>
-                                                <table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"100%\">
-                                                    <tr>
-                                                        <td valign=\"top\" width=\"61%\" bgcolor=\"#f4f4f4\" style=\"background-color: #f4f4f4; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -khtml-border-radius: 4px; padding: 5px 5px 5px 10px;\">
-                                                        ".$institucion."
-                                                        <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">
-                                                        » Problema</h3>
-                                                        <p style=\"font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 5px 0px 5px 30px;\">".$_POST['problema']."</p>
-                                                        </td>
-                                                        <td valign=\"top\" width=\"39%\">
-                                                            <table width=\"220\" border=\"0\" align=\"right\" cellpadding=\"0\" cellspacing=\"0\">
-                                                                <tr>
-                                                                    <td>
-                                                                        <table align=\"right\" width=\"220\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
-                                                                            <tr>
-                                                                                <td bgcolor=\"#f4f4f4\" valign=\"top\" style=\"background-color: #f4f4f4; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -khtml-border-radius: 4px;\">
-                                                                                    <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"20\">
-                                                                                        <tr>
-                                                                                            <td>
-                                                                                                <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">
-                                                                                                    Mensaje enviado el
-                                                                                                    </h3>
-                                                                                                <p style=\"color: #000; margin: 0px; padding:0; font-size: 16px; font-family: Georgia, 'Times New Roman', Times, serif;\">
-                                    ".$fDias[date('w')].", ".date('d')." de ".$fMeses[date('m')-1]." de ".date('Y')."
-                                                                                                </p>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                    <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"20\">
-                                                                                        <tr>
-                                                                                            <td>
-                                                                                                <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">
-                                                                                                    Datos Personales
-                                                                                                    </h3>
-                                                                                                <p style=\"color: #000; margin: 0px; padding:0; font-size: 16px; font-family: Georgia, 'Times New Roman', Times, serif;\">
-                                                                            » Nombre: ".$_POST['nombre']."<br>
-                                                                            » Apellido: ".$_POST['apellido']."<br>
-                                                                            » Correo: ".$_POST['email']."
-                                                                                                </p>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td valign=\"top\"><br><br>
-                                                                        <h3 style=\"font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #333 !important; margin:0px;\">
-                                                                            Contáctenos
-                                                                        </h3>
-                                                                        <p style=\"font-size: 17px; line-height: 18px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 0px;\">
-                                                                            »E-mail: plataforma@utpaqp.edu.pe<br><br>
-                                                                            »Telefono: 054-219125 Anexo 16<br><br>
-                                                                            »Facebook: <a href=\"facebook.com/plataformaeducativaUTA\" target=\"blank\">plataformaeducativaUTA</a>
-                                                                            <br><br>
-                                                                            »Youtube: <a href=\"youtube.com/user/PlataformaUTP\" target=\"blank\">PlataformaUTP</a>
-                                                                            <br><br>
-                                                                            »Google +: <a href=\"plus.google.com/109367046004834931951\" target=\"blank\">Plataforma Educativa</a>
-                                                                        </p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <br><br><br>
-                                    <table cellspacing=\"0\" border=\"0\" cellpadding=\"0\" width=\"500\" align=\"center\">
-                                        <tr>
-                                            <td>
-                                                <p style=\"font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif; color: #333; margin: 0px; text-align: center;\">
-                                                    <span style=\"font-size: 30px; text-align: center;\">''</span>".$mi_array[$numaleatorio]."<span style=\"font-size: 30px; text-align: center;\">''</span></p>
-                                                    <p style=\"font-size: 17px; line-height: 24px; font-family: Georgia, 'Times New Roman', Times, serif; margin: 0px; text-align: center;\">
-                                                    <a href=\"plataforma.edu.pe\" target=\"_blank\">Plataforma Educativa</a>.
-                                                    </p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                  <td><img style="display:block" border="0" src="img/image_02.jpg" width="421" height="120"></td>
+                  <td><img style="display:block" border="0" src="img/image_03.jpg" width="153" height="120"></td>
+                  <td><img style="display:block" border="0" src="img/image_04.jpg" width="55" height="120"></td>
                 </tr>
-            </table>
-        </td>
+              </table>
+              <table width="629" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="19" bgcolor="#DBDBDD"></td>
+                  <td width="35" bgcolor="#DEEAF6">&nbsp;</td>
+                  <td width="521">
+                    <table width="521" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td bgcolor="#DEEAF6">
+                          <center><img style="display:block" border="0" src="img/image_07.jpg" height="75"></center>
+                        </td>
+                      </tr>
+                    </table>
+                    <table width="521" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="43" bgcolor="#DEEAF6">&nbsp;</td>
+                        <td bgcolor="#DEEAF6">
+                          <font size=5 color="#5b6e53" face=georgia>
+                          Hola <b>'.$nombre.' '.$apellido.'</b> Ya eres parte del Cosplay, preparate para algo único.
+                          </font><br><br>
+                          <font size=3 color="#333333" face=Arial>
+                          Te esperamos el 21 de Marzo<br>
+                          a las 12:00pm en el campus de La Merced 209 - 215, Arequipa.
+                          </font>
+                        </td>
+                        <td width="43" bgcolor="#DEEAF6">&nbsp;</td>
+                      </tr>
+                    </table>
+
+                  </td>
+                  <td width="35" bgcolor="#DEEAF6">&nbsp;</td>
+                  <td width="19" bgcolor="#DBDBDD">&nbsp;</td>
+                </tr>
+              </table>
+              <table width="629" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><img style="display:block" border="0" src="img/image_10.jpg" width="629" height="37"></td>
+                </tr>
+              </table>
+              <table width="629" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><img style="display:block" border="0" src="img/image_11.jpg" width="629" height="290"></td>
+                </tr>
+              </table>
+              <table width="629" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding-bottom:15px">
+                  <div align="center">
+                  <font size=2 color="#999999" face=Arial>
+                  Todos los derechos reservados
+                  <a href="http://plataforma.edu.pe/" style="color:#000">
+                  Plataforma Educativa
+                  </a>
+                  </font>
+                  </div>
+                  </td>
+                </tr>
+              </table>          
+            </td>           
+          </tr>
+        </table>
+      </td>
     </tr>
-</table>
-</body>
-</html>");
+  </table>
+</BODY>
+</HTML>');
     //$mail->AddAttachment('images/spacer-top.jpg');
-    if($_POST['institucion']=="UTP Arequipa"){
-        $mail->AddAddress("plataforma@utpaqp.edu.pe", "Plataforma Educativa UTP AQP");
-    }
-    if($_POST['institucion']=="Unitek"){
-        $mail->AddAddress("plataforma@unitek.edu.pe", "Plataforma Educativa Unitek");
-    }
-    if($_POST['institucion']=="Imagina"){
-        $mail->AddAddress("plataforma@utpaqp.edu.pe", "Plataforma Educativa Imagena");
-    }
+    //$mail->AddAddress("luisgago@jm.edu.pe", "Game Fest - Plataforma Educativa");
     $mail->AddAddress($email, $nombre);
     $mail->Send();
 }

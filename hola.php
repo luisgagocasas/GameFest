@@ -1,8 +1,8 @@
 <?php
 $nombre = $_POST["nombre"];
-$apellido = $_POST['apellido'];
-$email = $_POST["email"];
-$problema = $_POST['problema'];
+$apellido = $_POST['apellidos'];
+$email = $_POST["correo"];
+$problema = $_POST['codigo'];
 if(isset($_POST["nombre"])){
     $respuesta = new stdClass();
     if(!empty($nombre) and !empty($apellido) and !empty($email) and !empty($problema)){
@@ -28,7 +28,7 @@ if(isset($_POST["nombre"])){
             <div class=\"cerrar\">x</div>
             <span class=\"texto\">
                 <h2>Su mensaje se guardó correctamente</h2>
-                <p>Reciviras una copia del mensaje en tu correo.</p>
+                <center><p>Reciviras una copia del mensaje en tu correo.</p></center>
             </span>
         </div>
         <div class=\"overlay\"></div>";
