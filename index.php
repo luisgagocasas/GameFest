@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1" />
 	<title>Game Fest</title>
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="stylesheet" href="css/estilos.css">
@@ -13,18 +12,21 @@
 	<!-- https://github.com/titoBouzout/SideBarEnhancements#f12-key -->
 	<!-- http://arturadib.com/hello-backbonejs/ -->
 	<!-- http://jallander.wordpress.com/2013/06/19/ejemplo-de-uso-de-backbone-js-localstorage-editor-de-tweets/ -->
+	<!-- http://blog.reaccionestudio.com/fondo-en-pantalla-completa-con-css/ -->
 	<script>
     $(document).ready(function(){
-        $("#gamereg").click(function(){
-            $.ajax({
-                type: "POST",
-                dataType: 'json',
-                url: "guardar.php"
-            }).done(function(respuesta){
-                $("#mensaje").html(respuesta.mensaje).fadeIn();
-            });
+        $("body").css({"overflow-y":"hidden"});
+        var alto=$(window).height();
+        $("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='img/logofinal.png' width='250' alt='Game Fest' /><br><img src='img/loader.gif'  /><br />Cargando...</div>");
+        $("#pre-load-web").css({height:alto+"px"});
+        $("#imagen-load").css({"margin-top":(alto/2)-120+"px"});
+    })
+    $(window).load(function(){
+        $("#pre-load-web").fadeOut(1000,function() {
+            $(this).remove();
+            $("body").css({"overflow-y":"auto"});
         });
-    });
+    })
     </script>
     <?php
 	$banners = array('paper_3.png','paper_4.png','paper_6.png','paper_5.png');
@@ -42,7 +44,7 @@
 					</a>
 				</figure>
 				<ul>
-					<li><a href="#inicio" id="registrate"><img src="img/registrate.png" />Registrate</a></li>
+					<li><a href="#registrate"><img src="img/registrate.png" />Registrate</a></li>
 					<li><a href="#reglamento"><img src="img/reglamento.png" />Reglamento</a></li>
 					<li><a href="#juegos"><img src="img/game.png" />Juegos</a></li>
 					<li><a href="#comparte"><img src="img/multimedia.png" />Multimedia</a></li>
@@ -60,7 +62,11 @@
 	<div class="pagina">
 		<div class="contenido">
 			<section id="inicio">
-				<!-- <h2>Inicio</h2> -->
+				<div class="video">
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/ImQCPIwi4vI" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</section>
+			<section id="registrate">
 				<div class="inscripcion">
 					<img src="img/01.png" id="gamereg" class="inscr one" />
 					<img src="img/02.png" id="cosplay" class="inscr twu" />
@@ -87,6 +93,7 @@
 						<p class="textimg">
 							<img src="img/logo.png" />
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod non quia accusamus vitae architecto cupiditate quibusdam. Autem assumenda sint explicabo.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, velit.
 						</p>
 						<div class="video">

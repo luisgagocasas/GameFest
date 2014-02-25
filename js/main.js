@@ -28,6 +28,7 @@ $(document).ready( function(){
         });
     });
 	$("#inicio").css("display","block");
+	$("#registrate").css("display","none");
 	$("#reglamento").css("display","none");
 	$("#juegos").css("display","none");
 	$("#comparte").css("display","none");
@@ -37,12 +38,22 @@ $(document).ready( function(){
 		if(strAncla=="#inicio"){
 			$("#inicio").css("display","block");
 			$("#inicio").addClass("efectoone");
+			$("#registrate").css("display","none");
+			$("#reglamento").css("display","none");
+			$("#juegos").css("display","none");
+			$("#comparte").css("display","none");
+		}
+		if(strAncla=="#registrate"){
+			$("#inicio").css("display","none");
+			$("#registrate").css("display","block");
+			$("#registrate").addClass("efectoone");
 			$("#reglamento").css("display","none");
 			$("#juegos").css("display","none");
 			$("#comparte").css("display","none");
 		}
 		else if(strAncla=="#reglamento"){
 			$("#inicio").css("display","none");
+			$("#registrate").css("display","none");
 			$("#reglamento").css("display","block");
 			$("#reglamento").addClass("efectoone");
 			$("#juegos").css("display","none");
@@ -50,6 +61,7 @@ $(document).ready( function(){
 		}
 		else if(strAncla=="#juegos"){
 			$("#inicio").css("display","none");
+			$("#registrate").css("display","none");
 			$("#reglamento").css("display","none");
 			$("#juegos").css("display","block");
 			$("#juegos").addClass("efectoone");
@@ -57,6 +69,7 @@ $(document).ready( function(){
 		}
 		else if(strAncla=="#comparte"){
 			$("#inicio").css("display","none");
+			$("#registrate").css("display","none");
 			$("#reglamento").css("display","none");
 			$("#juegos").css("display","none");
 			$("#comparte").css("display","block");

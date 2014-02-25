@@ -49,7 +49,7 @@ html,button,input,select,textarea
 	color #222
 
 body
-	background #FFF
+	background #000
 	// // background url(../img/bg.jpg) top no-repeat
 	// background url(http://koke.github.io/scalablebg/images/background.jpg) no-repeat center top
 	width 100%
@@ -89,12 +89,42 @@ fieldset
 textarea
 	resize vertical
 
+input
+	width: 250px
+	box-sizing border-box
+	padding 10px 10px 10px 10px
+	background-color #f6f6f6
+	border 1px solid #b5b5b5
+	border-radius 5px
+	font-size 14px
+	box-shadow 0 0 10px rgba(204,204,204,0.5) inset
+	-webkit-background-clip padding-box
+	outline 0
+
 #bg
 	position fixed
 	z-index -1
 	top 0
 	left 0
 	width 100%
+
+#pre-load-web
+	width 100%
+	position absolute
+	background #4683CE
+	left 0px
+	top 0px
+	z-index 100000
+
+	#imagen-load
+		left 50%
+		margin-left -150px
+		position absolute
+		text-align center
+
+		img:hover
+			animated()
+			animatedflip()
 
 .pagina
 	margin 0px auto 0px auto
@@ -268,6 +298,13 @@ header
 			p
 				display inline
 
+		.video
+			border 10px solid rgba(255,255,255,0.3)
+			border-radius 10px
+			width 560px
+			height 315px
+			margin 50px auto
+
 	.listajuegos
 		width 100%
 		height auto
@@ -278,6 +315,7 @@ header
 			display inline-block
 			margin 0px 10px 50px 10px
 			vertical-align top
+
 
 			.textimg
 				width 95%
@@ -291,8 +329,20 @@ header
 
 				&:hover
 					overflow visible
-					background linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(255, 255, 255, 0.2))
 					display block
+					min-height 360px
+					overflow-y scroll
+					position absolute
+					width 425px
+					margin 0px 10px 0px 10px
+					padding 5px
+					color #FFF
+
+				&:hover ~ .video
+					opacity 0.2
+					margin 110px 0px 0px 0px
+					animated()
+					animatedbounce()
 
 				img
 					width 200px
@@ -304,19 +354,23 @@ header
 						animatedpulse()
 
 			.video
-				border 10px solid rgba(255,255,255,0.3)
-				border-radius 10px
-				padding-bottom 56.25%
-				position relative
-				text-align left
+				width 420px
+				height 235px
+				margin 0 auto
 
 				iframe
-					position absolute
 					width 100%
 					height 100%
 
-			.textimg:hover > .video
-				opacity 0
+.boton-verde
+	background #00b941
+	border 1px solid #009a34
+	color #fff
+	font-size 13.5px
+	border-radius 5px
+	padding 10px 15px
+	text-transform uppercase
+	cursor pointer
 
 .mensaje, .error
 	position absolute
@@ -339,15 +393,34 @@ header
 		border-radius 10px
 		width 100%
 		box-sizing border-box
-		text-align center
 
 		h2
-			margin 0px 0px 0px 0px
 			font-size 1.4em
+			text-align center
 
 		p
-			margin 0px 0px 0px 0px
+			margin 0px 0px 10px 0px
 			line-height 14px
+
+		.frmcosplay,.detalles
+			display inline-block
+			vertical-align top
+
+		.frmcosplay
+			width 39%
+
+			label
+				display inline-block
+				width 175px
+
+		.detalles
+			width 56%
+			padding 70px 10px 0px 10px
+			text-align center
+
+			p
+				line-height normal
+				font-size 26px
 
 	.cerrar
 		font-size 15px
@@ -367,10 +440,10 @@ header
 		cursor pointer
 
 .mensaje
-	background #4b9833 url("../img/tip.png") no-repeat 6px center
+	background #B12E9C
 
 .error
-	background #C91717 url("../img/error.png") no-repeat 6px center
+	background #2E8CB1
 
 .overlay
 	background rgba(0,0,0,0.5)
