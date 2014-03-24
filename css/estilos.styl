@@ -1,7 +1,10 @@
+@css {
+/*  CSS3 Classes - Luis Gago Casas  */
+}
 @import 'nib/vendor'
-@import "keyframes.styl"
-@import "animate.styl"
-@import "animate-mixins.styl"
+// @import "keyframes.styl"
+// @import "animate.styl"
+// @import "animate-mixins.styl"
 
 vendor-prefixes = o ms moz webkit
 
@@ -90,7 +93,7 @@ textarea
 	resize vertical
 
 input
-	width: 250px
+	width 250px
 	box-sizing border-box
 	padding 10px 10px 10px 10px
 	background-color #f6f6f6
@@ -118,13 +121,19 @@ input
 
 	#imagen-load
 		left 50%
-		margin-left -150px
+		margin-left -230px
 		position absolute
 		text-align center
+		color #FFF
+
+		h3
+			margin 10px 0px 10px 0px
 
 		img:hover
 			animated()
 			animatedflip()
+
+@import "keyframess.styl"
 
 .pagina
 	margin 0px auto 0px auto
@@ -229,6 +238,9 @@ header
 					animated()
 					animatedpulse()
 
+.twitter
+	width 300px
+
 .efectoone
 	animated()
 	animatedbounceIn()
@@ -242,8 +254,21 @@ header
 	right 0
 	width 940px
 
+	.imgvideo
+		width 560px
+		position absolute
+		height 315px
+		cursor pointer
+
 	section
 		color #FFF
+
+		h3
+			margin 0px 0px 5px 30px
+			font-family Crete Round
+			// text-decoration underline
+			text-transform uppercase
+			text-align center
 
 		.inscripcion
 			width 100%
@@ -303,7 +328,7 @@ header
 			border-radius 10px
 			width 560px
 			height 315px
-			margin 50px auto
+			margin 20px auto
 
 	.listajuegos
 		width 100%
@@ -344,14 +369,29 @@ header
 					animated()
 					animatedbounce()
 
-				img
-					width 200px
+				.titulo
 					float left
-					margin 0px 5px 0px 0px
+					margin 25px 5px 5px 0px
+					font-weight bold
+					font-size 33px
 
 					&:hover
 						animated()
 						animatedpulse()
+
+			.reglamento
+				margin 10px 0 0 10px
+				// background #24CC6E
+				background-color #DB2323
+				padding 3px 5px 3px 5px
+				border-radius 5px
+				float right
+				box-shadow 0px 2px 5px #5E5A5A
+				border 1px rgba(0, 0, 0, 0.26) solid
+
+				a
+					text-decoration none
+					color #FFF
 
 			.video
 				width 420px
@@ -361,6 +401,49 @@ header
 				iframe
 					width 100%
 					height 100%
+
+	.fondos
+		width 23%
+		height auto
+		display inline-block
+		margin 0px 5px 50px 5px
+		vertical-align top
+		text-align center
+
+		figure
+			width 90%
+			height auto
+			margin 0px
+			border 10px solid rgba(255,255,255,0.3)
+			border-radius 10px
+
+			img
+				width 100%
+
+		button
+			width 100%
+			background #00b941
+			border 0px
+			color #fff
+			font-size 13.5px
+			border-radius 5px
+			padding 10px 15px
+			text-transform uppercase
+			cursor pointer
+			margin 5px 0px 0px 0px
+			border-bottom 3px solid #074E07
+			outline 0
+
+		.descarga
+			position absolute
+			margin 65px 0 0 -90px
+			text-decoration none
+			text-transform uppercase
+			display none
+			color #FFF
+			text-shadow 1px 3px 5px #000000
+			font-weight bold
+			z-index 1
 
 .boton-verde
 	background #00b941
@@ -374,14 +457,14 @@ header
 
 .mensaje, .error
 	position absolute
-	width 650px
+	// width 650px
 	height auto
-	top 30%
+	top 20%
 	left 50%
-	margin-left -295px
+	margin-left -260px
 	box-shadow 0px 0px 10px #000
 	padding 5px 5px 5px 5px
-	border-radius 5px
+	border-radius 10px
 	z-index 11520
 	transition opacity 0.3s
 
@@ -393,10 +476,13 @@ header
 		border-radius 10px
 		width 100%
 		box-sizing border-box
+		background url(../img/bg1.gif)
 
 		h2
 			font-size 1.4em
 			text-align center
+			color white
+			text-shadow 0px 1px 10px black
 
 		p
 			margin 0px 0px 10px 0px
@@ -407,20 +493,107 @@ header
 			vertical-align top
 
 		.frmcosplay
-			width 39%
+			h4
+				margin 0px
+				color white
+				text-shadow 0px 2px 5px #000000
 
+			//
 			label
-				display inline-block
-				width 175px
+				position relative
+
+				&:after
+					content '<>'
+					font 11px "Open Sans", monospace
+					color #aaa
+					-webkit-transform rotate(90deg)
+					-moz-transform rotate(90deg)
+					-ms-transform rotate(90deg)
+					transform rotate(90deg)
+					right 8px
+					top 2px
+					padding 0 0 2px
+					border-bottom 1px solid #ddd
+					position absolute
+					pointer-events none
+
+				select
+					margin 0px 0px 0px 0px
+					padding 5px
+					border-radius 4px
+					box-shadow 0 3px 0 #ccc, 0 -1px #fff inset
+					background #f8f8f8
+					color #888
+					border none
+					outline none
+					display inline-block
+					appearance none
+					width 100%
+
+					option
+						font-weight bolder
+						border-radius 5px
+						color #FFFFFF
+						border 1px #ccc solid
+						background #ccc
+			.titulo
+				display block
+				color white
+				text-shadow 0px 2px 5px #000000
+			//
+
+			fieldset
+				border 1px #868383 solid
+				padding 5px
+				border-radius 10px
+				width 235px
+
+				span
+					display inline-block
 
 		.detalles
-			width 56%
-			padding 70px 10px 0px 10px
+			padding 180px 10px 0 10px
 			text-align center
+			background url("../img/formcosplay.gif") no-repeat center top
+			height 88px
 
 			p
-				line-height normal
-				font-size 26px
+				font-size 30px
+				color #FFF
+				background-color rgba(36, 123, 182, 0.25)
+				border-radius 5px
+				font-weight bold
+				text-shadow 0px 2px 5px #000
+				font-family Crete Round
+				line-height 25px
+				padding 5px 0px 15px 0px
+				width 280px
+				margin 0px auto
+
+		.btn
+			box-sizing border-box
+			color #fff
+			display inline-block
+			zoom 1
+			font-size 18px
+			height 30px
+			line-height 30px
+			padding 0 15px
+			position relative
+			cursor pointer
+			border none
+			background #2ecc71
+			box-shadow 0px 1px 10px black
+
+			&:before
+				border-right-color #2ecc71
+				border-bottom 15px solid transparent
+				border-right 10px solid #2ecc71
+				border-top 15px solid transparent
+				content ""
+				position absolute
+				right 100%
+				top 0
 
 	.cerrar
 		font-size 15px
@@ -439,11 +612,11 @@ header
 		box-shadow 0px 0px 2px #FFF
 		cursor pointer
 
-.mensaje
-	background #B12E9C
+// .mensaje
+// 	background #2EB143
 
-.error
-	background #2E8CB1
+// .error
+// 	background #2E8CB1
 
 .overlay
 	background rgba(0,0,0,0.5)
@@ -454,33 +627,119 @@ header
 	right 0
 	cursor default
 
-@import "keyframess.styl"
+.rojo
+	color #F00
 
-.tipos
+.scrolmg
+	overflow-y scroll
+	height 260px
+	width 280px
+
+.planes
 	width 100%
 	height auto
 	text-align center
 
-	.tipo
-		margin 10px auto
+	.plan
+		margin 5px 0px 10px 0px
 		display inline-block
+		width 200px
+		box-shadow 0px 1px 10px black
+		background-color white
+		border-radius 10px
 
-		a
-			float left
-			width 200px
-			height 50px
-			line-height 50px
-			background-color #ddd
-			padding-left 20px
-			border-radius 10px
-			box-shadow 0 2px 0 #4c9434
-			background linear-gradient(to bottom, #60B842 0%, #7FD13D 85%)
+		.azul
+			background #008fd5
+
+			&:after
+				border-top 25px solid #008fd5
+
+		.rojo
+			background #D32B2B
+
+			&:after
+				border-top 25px solid #D32B2B
+
+		.verde
+			background #2BD353
+
+			&:after
+				border-top 25px solid #2BD353
+
+		.valor
 			color #fff
-			font-size 17px
-			font-weight bold
-			text-shadow 1px 1px 1px #4c9434
-			text-decoration none
+			padding 12px 0 0
+			position relative
 
-			&:hover
-				background-image linear-gradient(center bottom,#6DD14B 0%,#85DB40 85%)
-				box-shadow 0 2px 0 #5EA836
+			.precio
+				display inline-block
+				zoom 1
+				position relative
+
+				.simbolo
+					position absolute
+					left 50px
+					top 0
+
+				.cantidad
+					font-size 40px
+					line-height 30px
+					font-family Crete Round
+
+				.moneda
+					font-size 10px
+					left 5px
+					position absolute
+					text-transform uppercase
+					top 100%
+					z-index 1
+
+			&:after
+				border-left 100px solid white
+				border-right 100px solid white
+				content " "
+				left 0px
+				position absolute
+				top 100%
+
+		.caracteristicas
+			background #fff
+			padding-top 35px
+
+			h3
+				color #003132
+				font-size 24px
+				font-style italic
+				text-transform uppercase
+				margin 0px
+				font-family Crete Round
+
+			p
+				font-size 14px
+				height 30px
+				line-height 30px
+
+				&:nth-child(2n)
+					background #edeced
+
+		.comprar
+			width 100%
+			height 45px
+			background #ffc43a
+			border none
+			border-bottom 3px solid #f39c12
+			box-sizing border-box
+			color #b26500
+			display inline-block
+			zoom 1
+			font-size 16px
+			font-style normal
+			font-weight 500
+			line-height 15px
+			min-width 125px
+			padding 15px 0 0 0
+			text-align center
+			text-transform uppercase
+			outline 0
+			text-decoration none
+			cursor pointer
